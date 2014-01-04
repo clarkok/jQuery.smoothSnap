@@ -9,6 +9,10 @@ body {
     height: 200px;
 }
 
+.header h1 {
+    margin: 0;
+}
+
 .wrapper {
     margin: 50px auto auto auto;
     width: 950px;
@@ -32,4 +36,7 @@ body {
     top: 0;
     display: inline-block;
     background: yellow;
+    color: red;
+    font-size: 2em;
 }
+

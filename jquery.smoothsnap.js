@@ -21,7 +21,7 @@
             var target = _this;
 
             // cache the scrollTop of the body
-            var scroll_top = document.body.scrollTop;
+            var scroll_top = document.body.scrollTop || document.documentElement.scrollTop;
 
             // cache of the current top value
             var offset_top = parseInt(target.css('top'));
@@ -59,7 +59,7 @@
                                 distance, start) + 'px');
                 }
                 else {
-                    original_target.style.top = '0';
+                    target.css('top', '0');
                 }
             }
             else {
@@ -73,6 +73,7 @@
             }
         }
 
-        $(window).on('scroll', scrollHandler);
+        // For IE
+        $(window).scroll(scrollHandler);
     }
 }) (jQuery);
