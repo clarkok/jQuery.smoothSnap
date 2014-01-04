@@ -49,8 +49,10 @@
             // if is snapped
             if (target.css('position') === 'fixed') {
                 if (original_top - start > scroll_top) {
-                    target.css('top', '0');
-                    target.css('position', 'relative');
+                    target.css({
+                        top: 0,
+                        position: 'relative'
+                    });
                     return;
                 }
                 if (original_top + distance -start > scroll_top) {
@@ -64,10 +66,11 @@
             }
             else {
                 if (original_top - start <= scroll_top) {
-                    target.css('top',
-                        calcTop(scroll_top - (original_top - start),
-                                distance, start) + 'px');
-                    target.css('position', 'fixed');
+                    target.css({
+                        position: 'fixed',
+                        top: calcTop(scroll_top - (original_top - start),
+                                distance, start) + 'px'
+                    });
                     return;
                 }
             }
