@@ -2,4 +2,4 @@
 
 To snapped an aside bar smoothly.
 
-[Demo is there](http://clarkok.github.io/jquery.smoothsnap)
+[Demo is there](http://clarkok.github.io/jquery-smoothsnap)
