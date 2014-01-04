@@ -33,8 +33,3 @@ body {
     display: inline-block;
     background: yellow;
 }
-
-.aside.snapped {
-    position: fixed;
-    top: 0;
-}
