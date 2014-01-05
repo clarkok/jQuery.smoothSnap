@@ -78,5 +78,7 @@
 
         // For IE
         $(window).scroll(scrollHandler);
+
+        return this;
     }
 }) (jQuery);
