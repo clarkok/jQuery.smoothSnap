@@ -18,13 +18,16 @@
         // handler of the Scroll event of the window
         var scrollHandler = function() {
             // target of the snap
-            var target = _this;
+            var target = _this.eq(0);
 
             // cache the scrollTop of the body
             var scroll_top = document.body.scrollTop || document.documentElement.scrollTop;
 
             // cache of the current top value
             var offset_top = parseInt(target.css('top'));
+            if (!offset_top) {
+                offset_top = 0;
+            }
 
             // original top when item is not snapped
             var original_top = scrollHandler.original_top;
